@@ -1,0 +1,15 @@
+<div class="p-4">
+  <div class="mb-4">
+    <app-legend [data]="legendData"></app-legend>
+  </div>
+  <div class="">
+    <canvas
+      baseChart
+      class="w-full h-60"
+      [data]="barChartData"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [type]="'bar'">
+  </canvas>
+  </div>
+</div>

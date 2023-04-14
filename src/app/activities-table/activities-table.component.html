@@ -1,0 +1,40 @@
+<div class="flex flex-col">
+  <div class="p-4">
+    <app-legend [data]="legendData"></app-legend>
+  </div>
+  <div class="">
+    <table class="table-fixed w-full border-collapse border border-slate-500">
+      <thead>
+        <tr>
+          <th rowspan="2" class="w-[12%] border font-semibold text-xs text-[#162736] text-left px-4">Students</th>
+          <th colspan="4" class="w-[23%] border-t border-r pt-2 pb-1 font-semibold text-xs text-[#162736]/60 text-left px-4">Weekly Quest</th>
+          <th colspan="2" class="w-[30%] border-t border-r pt-2 pb-1 font-semibold text-xs text-[#162736]/60 text-left px-4">Activities Completed</th>
+          <th colspan="2" class="w-[30%] border-t pt-2 pb-1 font-semibold text-xs text-[#162736]/60 text-left px-4">Time on Activities</th>
+          <th rowspan="2" class="w-[5%] border"></th>
+        </tr>
+        <tr>
+          <th class="text-left px-4 border-b pb-2 pt-1 font-normal text-xs text-[#162736]/60">Aug 22</th>
+          <th class="text-left px-4 border-b pb-2 pt-1 font-normal text-xs text-[#162736]/60">Aug 29</th>
+          <th class="text-left px-4 border-b pb-2 pt-1 font-normal text-xs text-[#162736]/60">Sep 5</th>
+          <th class="text-left px-4 border-b border-r pb-2 pt-1 font-normal text-xs text-[#162736]/60">Sep 12</th>
+          <th class="text-left px-4 border-b pb-2 pt-1 font-normal text-xs text-[#162736]/60">This Week</th>
+          <th class="text-left px-4 border-b border-r pb-2 pt-1 font-normal text-xs text-[#162736]/60">Last 4 Weeks</th>
+          <th class="text-left px-4 border-b pb-2 pt-1 font-normal text-xs text-[#162736]/60">This Week</th>
+          <th class="text-left px-4 border-b pb-2 pt-1 font-normal text-xs text-[#162736]/60">Last 4 Weeks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of STUDENTS" class="h-9">
+          <td class="text-left px-4 border-x">{{row.name}}</td>
+          <td *ngFor="let week of row.weeklyQuest" class="text-left px-4 border-x">{{week}}</td>
+          <td *ngFor="let act of row.activitiesComplted" class="text-left px-4 border-x">{{act.score}}</td>
+          <td *ngFor="let time of row.timeOnActivities" class="text-left px-4 border-x">{{time}}</td>
+          <td class="text-center border-x">...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="p-4 mt-2 flex flex-row-reverse">
+    <a href="" class="text-base font-normal text-[#0058CC]">Student Performance Report ></a>
+  </div>
+</div>

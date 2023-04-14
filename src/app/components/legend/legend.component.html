@@ -1,0 +1,6 @@
+<ul class="flex space-x-6">
+  <li *ngFor="let item of data" class="flex items-center">
+    <div class="w-2 h-2 rounded-full mr-2 {{item.colorClass}}"></div>
+    <div class="text-xs text-[#11283cad]">{{item.label}}</div>
+  </li>
+</ul>
