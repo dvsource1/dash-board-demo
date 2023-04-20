@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './activities-table.component.html',
   styleUrls: ['./activities-table.component.less']
 })
-export class ActivitiesTableComponent {
+export class ActivitiesTableComponent { 
   legendData = [
     {label: '80% - 100% score', colorClass: 'bg-[#00B271]'},
     {label: '40% - 79% score', colorClass: 'bg-[#FFCC00]'},

@@ -8,6 +8,9 @@ import { NgChartsModule } from 'ng2-charts';
 import { ActivitiesChartComponent } from './activities-chart/activities-chart.component';
 import { ActivitiesTableComponent } from './activities-table/activities-table.component';
 import { LegendComponent } from './components/legend/legend.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CircleStatusComponent } from './components/circle-status/circle-status.component';
+import { LineStatusComponent } from './components/line-status/line-status.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { LegendComponent } from './components/legend/legend.component';
     DashboardComponent,
     ActivitiesChartComponent,
     ActivitiesTableComponent,
-    LegendComponent
+    LegendComponent,
+    CircleStatusComponent,
+    LineStatusComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgChartsModule
+    NgChartsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

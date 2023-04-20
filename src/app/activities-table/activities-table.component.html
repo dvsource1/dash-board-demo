@@ -25,10 +25,14 @@
       </thead>
       <tbody>
         <tr *ngFor="let row of STUDENTS" class="h-9">
-          <td class="text-left px-4 border-x">{{row.name}}</td>
-          <td *ngFor="let week of row.weeklyQuest" class="text-left px-4 border-x">{{week}}</td>
-          <td *ngFor="let act of row.activitiesComplted" class="text-left px-4 border-x">{{act.score}}</td>
-          <td *ngFor="let time of row.timeOnActivities" class="text-left px-4 border-x">{{time}}</td>
+          <td class="font-normal text-sm text-[#4A4A4A] text-left px-4 border-x">{{row.name}}</td>
+          <td class="font-normal text-sm text-[#4A4A4A] text-left px-4" *ngFor="let week of row.weeklyQuest; index as idx">
+            <app-circle-status [score]="idx"></app-circle-status>
+          </td>
+          <td class="font-normal text-sm text-[#4A4A4A] text-left px-4 border-x" *ngFor="let act of row.activitiesComplted">
+            <app-line-status [score]="act.score"></app-line-status>
+          </td>
+          <td class="font-normal text-sm text-[#4A4A4A] text-left px-4 border-x" *ngFor="let time of row.timeOnActivities">{{time}}</td>
           <td class="text-center border-x">...</td>
         </tr>
       </tbody>
